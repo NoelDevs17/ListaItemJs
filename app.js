@@ -30,3 +30,13 @@ function agregarItem(e){
 
     lista.appendChild(li);
 }
+
+//Función para eliminar un Item de la lista
+function eliminarItem(e){
+    if(e.target.classList.contains('eliminar')){
+        if(confirm('¿Seguro que desea eliminar el elemento')){
+            var li = e.target.parentElement;
+            lista.removeChild(li);
+        }        
+    }
+}
